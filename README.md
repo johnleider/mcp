@@ -2,6 +2,10 @@
 
 Machine Context Protocol (MCP) server.
 
+<a href="https://glama.ai/mcp/servers/@johnleider/mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@johnleider/mcp/badge" alt="Server MCP server" />
+</a>
+
 ## Overview
 
 This is a Model Context Protocol (MCP) server implementation that allows AI assistants like Claude to interact with your custom tools and resources. The server is built using the official `@modelcontextprotocol/sdk` package and provides a modular architecture for adding custom capabilities.

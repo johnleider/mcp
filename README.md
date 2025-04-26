@@ -2,6 +2,10 @@
 
 Machine Context Protocol (MCP) server.
 
+<a href="https://glama.ai/mcp/servers/@johnleider/mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@johnleider/mcp/badge" alt="Server MCP server" />
+</a>
+
 ## Overview
 
 

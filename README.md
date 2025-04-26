@@ -4,6 +4,9 @@ Machine Context Protocol (MCP) server.
 
 ## Overview
 
+This is a Model Context Protocol (MCP) server implementation that allows AI assistants like Claude to interact with your custom tools and resources. The server is built using the official `@modelcontextprotocol/sdk` package and provides a modular architecture for adding custom capabilities.
+
+This MCP server runs as a Node.js application and communicates over stdio, making it compatible with VS Code's MCP integration. It's designed to be extensible, allowing you to add custom tools, resources, and prompts to enhance AI capabilities in your development workflow.
 
 ## Installation
 
@@ -18,9 +21,9 @@ pnpm run build
 pnpm start
 ```
 
-## Configuration for Claude
+## Configuration for VS Code
 
-To use this MCP server with Claude, add the following to your `.vscode/mcp.json` file (or move it to `settings.json` for global usage):
+To use this MCP server with VS Code, add the following to your `.vscode/mcp.json` file (or move it to `settings.json` for global usage):
 
 ```json
 {
@@ -52,7 +55,36 @@ You can also verify the discovery and configuration by using the command palette
 
 ## Features
 
+This MCP server provides a structured foundation for building custom tools and capabilities for AI assistants with:
+
+- **Modular Architecture**: Organized into distinct modules for tools, resources, and prompts
+- **Stdio Communication**: Compatible with VS Code's MCP integration through stdio transport
+- **Environment Configuration**: Uses dotenv for environment variable management
+- **TypeScript Support**: Full TypeScript integration for type safety
+- **Extensible Design**: Easily add new tools and capabilities by implementing the provided interfaces
+
+The server is designed to be expanded with custom tools for helping with components, layouts, and documentation as indicated in the capabilities description.
+
 ## Project Structure
+
+```
+mcp/
+├── src/
+│   ├── index.ts              # Main entry point, server initialization
+│   ├── prompts/              # Prompt registration and management
+│   │   └── index.ts          # Prompt registration module
+│   ├── resources/            # Resource definitions and handlers
+│   │   └── index.ts          # Resource registration module
+│   └── tools/                # Tool implementations
+│       └── index.ts          # Tool registration module
+├── .github/                  # GitHub-specific files
+│   └── FUNDING.yml           # Sponsorship configuration
+├── eslint.config.js          # ESLint configuration
+├── package.json              # Project metadata and dependencies
+├── pnpm-lock.yaml            # Dependency lock file
+├── tsconfig.json             # TypeScript configuration
+└── README.md                 # Project documentation
+```
 
 ## Development
 
